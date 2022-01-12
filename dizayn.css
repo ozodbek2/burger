@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1110px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+:root {
+    --RReg: 'Raleway-Regular';
+    --RThin: 'Raleway-Thin';
+    --RLight: 'Raleway-Light';
+    --RBlack: 'Raleway-Black';
+    --Rbold: 'Raleway-Bold';
+    --FBg75: rgba(105, 207, 23, 0.75);
+    --FBg90: rgba(105, 207, 23, 0.9);
+    --MFBg: #060002;
+    --RecipeTextColoe: #c1c1c1c1;
+    --TextColor: #dedede;
+    --FontColor: #69cf17;
+    --LogoBorder: #62be19;
+    --ColorWhite: #fff;
+    --BurgerMenuLinksColor: #7a7a7a;
+}
+
+.header {
+    background: url(./img/bg_img.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav-list {
+    display: flex;
+}
+
+.nav-list__links {
+    padding: 40px 10px;
+    font-family: var(--RLight);
+    font-size: 20px;
+    transition: 0.5s;
+    color: var(--FontColor);
+    display: inline-block;
+}
+
+.nav-list__links:hover {
+    background: var(--FBg75);
+    color: var(--ColorWhite);
+
+}
+
+.count {
+    color: var(--FBg75);
+    background: var(--ColorWhite);
+    padding: 2px 8px;
+    border-radius: 50%;
+    font-family: var(--RReg);
+    font-size: 20px;
+}
+
+.logo {
+    text-transform: uppercase;
+    font-family: var(--Rbold);
+    padding: 8px 20px;
+    color: var(--ColorWhite);
+    background: linear-gradient(to bottom, #48920c, #4e9f0d, #4e9f0d, #4e9f0d);
+    border-image-slice: 1;
+    border: 3px solid var(--LogoBorder);
+    border-radius: 5px;
+}
+
+.header-title {
+    font-size: 72px;
+    font-family: var(--RBlack);
+    color: var(--FontColor);
+    text-transform: uppercase;
+    line-height: 50px;
+    margin-bottom: 20px;
+}
+
+.header-subtitle {
+    color: var(--FontColor);
+    text-transform: uppercase;
+    font-family: var(--RReg);
+    margin-bottom: 35px;
+}
+
+.header-text {
+    color: var(--TextColor);
+    font-family: var(--RReg);
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.header-price {
+    font-family: var(--RThin);
+    font-size: 60px;
+    background: var(--FBg75);
+    padding: 30px 90px;
+    margin-top: 80px;
+    color: var(--ColorWhite);
+    width: max-content;
+}
+
+.header .container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+}
+
+.header-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main {
+    padding: 50px 0;
+    background: var(--MFBg);
+}
+
+.burger-menu {
+    display: flex;
+    margin-bottom: 70px;
+}
+
+.burger-menu__links {
+    color: var(--BurgerMenuLinksColor);
+    font-family: var(--Rbold);
+    font-size: 20px;
+    margin-right: 50px;
+    transition: 0.5s;
+}
+
+.burger-menu__links:hover {
+    color: var(--FontColor);
+}
+
+
+.burger-card {
+    position: relative;
+    width: max-content;
+    overflow: hidden;
+}
+
+.burger-card__link {
+    width: 100%;
+    height: 100%;
+    background: var(--FBg90);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: -350px;
+    transform: rotate(-360deg);
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.burger-price {
+    transition: 0.5s;
+    font-family: var(--RReg);
+    font-size: 24px;
+    color: var(--ColorWhite);
+    background: var(--FBg75);
+    padding: 20px 60px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: rotate(-360deg);
+}
+
+.burger-card:hover .burger-card__link {
+    top: 0;
+    left: 0;
+    transform: rotate(0);
+}
+
+.burger-card:hover .burger-price {
+    left: 350px;
+    bottom: 0;
+    transform: rotate(0);
+}
+
+.burger-title {
+    margin: 40px 0 20px 0;
+    text-transform: uppercase;
+    color: var(--FontColor);
+    font-size: 24px;
+    font-family: var(--Rbold);
+}
+
+.burger-text {
+    line-height: 27px;
+    font-size: 16px;
+    color: var(--TextColor);
+    text-align: justify;
+    max-width: 350px;
+}
+
+.burger-row{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+   padding-bottom: 50px;
+}
+
+.recipe {
+    padding: 50px 0 100px 0;
+    background: url(./img/1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.recipe-title {
+    font-size: 36px;
+    font-family: var(--Rbold);
+    color: var(--FontColor);
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.recipe-title::after {
+    content: '';
+    width: 200px;
+    height: 1px;
+    background: var(--FontColor);
+    margin-top: 25px;
+}
+
+.recipe-text{
+    font-family: var(--RReg);
+    font-size: 18px;
+    color: var(--TextColor);
+    line-height: 27px;
+    text-align: justify;
+}
+.recipe-text:nth-of-type(1){
+    margin-bottom: 40px;
+}
+
+.branch-title{
+    padding: 50px 0;
+    background: white;
+    display: flex;
+    justify-content: center;
+    color: var(--FontColor);
+    font-size: 36px;
+    font-family: var(--Rbold);
+    text-transform: uppercase;
+}
+
+.footer-list{
+    margin: 50px 0 45px 0;
+    display: flex;
+    justify-content: center;
+    /* justify-content: space-between; */
+}
+.footer-list__links{
+    text-decoration: none;
+    color: var(--TextColor);
+    font-size: 18px;
+    font-family: var(--RReg);
+    margin: 0 25px;
+    text-transform: capitalize;
+    transition: 0.5s;
+}
+.footer-list__links:hover{
+    color: var(--FontColor);
+}
+.footer-text{
+    font-family: var(--RReg);
+    color: var(--TextColor);
+    font-size: 16px;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+}
+.footer-logo__tel{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer__tel{
+    font-size: 24px;
+    color: var(--FontColor);
+    font-family: var(--Rbold);
+}
+.footer{
+    background: var(--MFBg);
+    padding: 50px 0;
+}
